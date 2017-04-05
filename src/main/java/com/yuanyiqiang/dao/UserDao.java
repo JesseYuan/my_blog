@@ -1,5 +1,7 @@
 package com.yuanyiqiang.dao;
 
+import org.springframework.stereotype.Repository;
+
 import com.yuanyiqiang.entity.User;
 
 /**
@@ -7,6 +9,7 @@ import com.yuanyiqiang.entity.User;
  * @author Jesse
  * @since 2017-01-22 21:10:05
  */
+@Repository
 public interface UserDao {
 
 	/**
