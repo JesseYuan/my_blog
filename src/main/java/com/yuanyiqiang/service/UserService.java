@@ -1,16 +1,19 @@
 package com.yuanyiqiang.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.yuanyiqiang.dao.UserDao;
 import com.yuanyiqiang.entity.User;
+import com.yuanyiqiang.service.UserService;
 
-/**
- * @描述: UserServicec接口类
- * @author Jesse
- *
- */
 @Service
-public interface UserService {
+public class UserServiceImpl implements UserService{
 
-	User getUserById(Integer userId);
+	@Autowired
+	private UserDao userDao;
+
+	public User getUserById(Integer userId) {
+		return userDao.getUserById(userId);
+	}
 }
